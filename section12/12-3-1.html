@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
+        /* 호환이 어디에나 가능하지만 편법 */
         * {
             margin: 0;
             padding: 0;
@@ -13,6 +14,9 @@
 
         .video-wrapper{
             padding-top: 56.25%;
+            /* 부모의 WIDTH값에 영향을 받기때문 */
+            height: 56.25vw;
+            /* width값을 따라 가야해서 vw, vh아님 */
             position: relative;
         }
 
