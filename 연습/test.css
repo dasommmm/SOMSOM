@@ -41,6 +41,8 @@ nav {
 
 nav ul {
     overflow: hidden;
+    /* 없애면 색깔이 안먹힘
+    부모에 overflow */
     background-color: yellow;
 }
 
@@ -48,6 +50,7 @@ nav li {
     float: left;
     padding: 0 4px;
     margin: 0 8px;
+    /* 잘몰라ㅜ */
     line-height: 30px;
 }
 
@@ -58,6 +61,8 @@ nav > ul:last-child {
 
 main {
     overflow: hidden;
+    /* 부모에 overflow 
+    float때문*/
 }
 
 main > * {
@@ -88,6 +93,7 @@ h2 + p {
 main > aside {
     width: 246px;
     box-sizing: border-box;
+    /* border때문에 넘쳐서 밑으로 감 */
     border: 1px solid black;
     margin-top: var(--margin);
     margin-left: var(--margin);
@@ -107,6 +113,7 @@ aside > .banner-box {
 footer {
     padding: var(--padding);
     clear: both;
+    /* 왜 변화 없지? */
     background-color: antiquewhite;
     border: 1px solid black;
     margin-top: var(--margin);
