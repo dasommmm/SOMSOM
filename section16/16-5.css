@@ -8,6 +8,7 @@
             position: relative;
             animation: rint 3s linear 1s infinite;
             transform-style: preserve-3d;
+            margin: 100px;
         }
         div{
             width: 300px;
@@ -18,29 +19,37 @@
             opacity: 0.3;
         }
         div:nth-child(1){
-            transform: rotateY(0deg)translate3d(0px,0px,100px);
+            transform: rotateY(0deg)translate3d(0px,0px,150px);
             background-color: red;
         }
         div:nth-child(2){
-            transform: rotateY(90deg) translate3d(0px,0px,100px);
+            transform: rotateY(90deg) translate3d(0px,0px,150px);
             background-color: green;
         }
         div:nth-child(3){
-            transform: rotateY(180deg) translate3d(0px,0px,100px);
+            transform: rotateY(180deg) translate3d(0px,0px,150px);
             background-color: blue;
         }
         div:nth-child(4){
-            transform: rotateX(270deg) translate3d(0px,0px,100px);
+            transform: rotateX(270deg) translate3d(0px,0px,150px);
             background-color: yellow;
         }
         div:nth-child(5){
-            transform: rotateX(90deg) translate3d(0px,0px,100px);
+            transform: rotateX(90deg) translate3d(0px,0px,150px);
             background-color: brown;
         }
         div:nth-child(6){
-            transform: rotateX(270deg) translate3d(0px,0px,100px);
+            transform: rotateX(270deg) translate3d(0px,0px,150px);
             background-color: pink;
         }
 
+        @keyframes rint{
+            from{
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+            to{
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
     
- 
+/* 다시 해봐 */
