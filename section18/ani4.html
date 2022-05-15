@@ -26,6 +26,7 @@
             top: 70%;
             transform: translateX(-50%);
             animation: drag 2s infinite;
+            /* 왜 마우스가 아닌 센터버튼에 애니넣어주지? */
 
         }
         .mouse{
@@ -87,37 +88,7 @@
             }
         } 
 
-        .circle{
-            background-image:conic-gradient(tomato 0deg, #00000000 0deg);
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            position: relative;
-            transition: 2s;
-            /* animation: donut 2s infinite; */
-        }
-        .circle-inner{
-            width: 80px;
-            height: 80px;
-            background-color: #cfcfcf;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            text-align: center;
-            line-height: 80px;
-        }
-
-        @keyframes donut {
-            from {
-                background-image:conic-gradient(tomato 0deg, #00000000 0deg);
-            }
-
-            to {
-                background-image:conic-gradient(#ffffff 359deg, #00000000 0deg);
-            }
-        }
+    
     </style>
     </head>
 <body>
