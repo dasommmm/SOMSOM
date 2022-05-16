@@ -27,7 +27,7 @@
             transform: translateX(-50%);
             animation: drag 2s infinite;
             /* 왜 마우스가 아닌 센터버튼에 애니넣어주지? */
-
+            
         }
         .mouse{
             border: 2px solid white;
@@ -61,13 +61,15 @@
                 transform: scale(1) translateX(-50%);
                 opacity: 1;
             }
-
+            
             50%{
+                /* transform: scale(1) translateX(-50%); */
                 top: 75%;
                 opacity: 1;
             }
             
             to{
+                /* transform: scale(1) translateX(-50%); */
                 opacity:0;
                 top: 75%;
             }
