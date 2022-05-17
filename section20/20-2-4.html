@@ -10,30 +10,42 @@
             margin: 0;
             padding: 0;
         }
+        img{
+            display: block;
+            width: 100%;
+        }
         #wrapper{
-            width: 96%;
+            max-width: 960px;
+            /* width: 100%; */
+            /* 기본값 */
             margin: 0 auto;
+
         }
         header{
             width: 100%;
             height: 120px;
             background-color: aquamarine;
         }
+        main{
+            width: 100%;
+        }
         aside{
             float: left;
-            width: 31.25%;
+            width: 30%;
             background-color: antiquewhite;
         }
         section{
             float: right;
-            width: 62.5%;
+            width: 60%;
             background-color: darksalmon;
             
         }
-        section>img{
-            max-width: 100%;
-            height: auto;
+        figure{
+            object-fit: contain;
+            height: 400px;
+            overflow: hidden;
         }
+        
         footer{
             clear: both;
             width: 100%;
@@ -46,9 +58,15 @@
 <body>
     <div id="wrapper">
         <header>가변그리드 만들어보기</header>
-        <aside>aside</aside>
-        <section><img src="../img/pen.png" alt="대체이미지"></section>
-        <footer>footer</footer>
+        <main>
+            <aside>aside</aside>
+            <section>
+                <figure>
+                    <img src="../img/pen.png" alt="대체이미지">
+                </figure>
+            </section>
+        </main>
+            <footer>footer</footer>
     </div>
 </body>
 </html>
