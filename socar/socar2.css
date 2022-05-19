@@ -1,0 +1,52 @@
+header{
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    background: transparent;
+    border: 0;
+    box-sizing: border-box;
+    float: left;
+}
+.hidden{
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: text(1px 1px 1px 1px);
+    clip-path: inset(50%);
+}
+h1 figure{
+    width: 112px;
+    height: 23px;
+    float: left;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 40px;
+}
+.hamberger{
+    width: 36px;
+    height: 14px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 40px;
+}
+.hamberger>p{
+    width: 26px;
+    height: 3px;
+    background-color: white;
+}
+.hamberger p:nth-child(2){
+    margin-top: 8px;
+    left: 10px;
+    position: absolute;
+}
+#main-title{
+    /* padding-top: 60px; */
+    background-image: url(/socar/socar-img/main_visual_fullscreen.jpg);
+    height: 100vh;
+    /* 브라우저 높이의 100퍼센트 */
+}
+.main-title-heading{
+    
+}
