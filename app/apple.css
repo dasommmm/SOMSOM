@@ -1,0 +1,33 @@
+:root{
+    --header-color:#424245;
+}
+header{
+    height: 44px;
+    width: 100%;
+    background-color: var(--header-color);
+    overflow: hidden;
+    
+    
+}
+header ul{
+    margin: 0 auto;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+header li{
+    float: left;
+}
+header>span{
+    text-align: center;
+
+}
+
+header span{
+    color: white;
+    font-size: 14px;
+    margin: 4px;
+}
+
+figure{
+    margin-top: 0px;
+}
