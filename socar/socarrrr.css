@@ -5,12 +5,26 @@
     --font-gray: #AAAAAA;
     --font-footer-light: #C5C8Ce;
     --font-footer-dark: #646F7C;
+    --background-color-gray:#f7f8f9;
+    --footer-background:#28323C;
+}
+
+@font-face {
+    font-family: 'Happiness-Sans-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html{
+    font-family: 'Happiness-Sans-Bold';
 }
 
 header {
     position: fixed;
     width: 100%;
     height: 60px;
+    z-index: 1;
     /* display: flex;
     justify-content: space-between;
     align-items: center; */
@@ -33,7 +47,7 @@ h1 figure {
     overflow: hidden;
 }
 
-.hamberger-wrapper {
+.hamberger {
     width: 36px;
     height: 36px;
     margin-top: 12px;
@@ -41,7 +55,7 @@ h1 figure {
     float: right;
 }
 
-.hamberger-wrapper::before {
+.hamberger::before {
     display: block;
     content: '';
     background-color: white;
@@ -49,7 +63,7 @@ h1 figure {
     width: 26px;
     margin-top: 10px;
 }
-.hamberger-wrapper::after {
+.hamberger::after {
     display: block;
     content: '';
     background-color: white;
@@ -62,7 +76,7 @@ h1 figure {
 #main-title {
     /* 브라우저 height값의 100%만큼 높이 지정 */
     height: 100vh;
-    background-image: url(/socar/socar-img/main_visual_fullscreen.jpg);
+    background-image: url(./socar-img/main_visual_fullscreen.jpg);
     position: relative;
 }
 
@@ -80,7 +94,6 @@ h1 figure {
 
 #introduce {
     width: 800px;
-    /* 왜800이지 */
     margin: 0 auto;
 }
 
@@ -93,7 +106,7 @@ h1 figure {
     font-size: 40px;
     color: var(--font-black);
     font-weight: 900;
-    /* 이게 머지 */
+    
     position: relative;
 }
 
@@ -119,4 +132,112 @@ h1 figure {
 
 #introduce figure {
     margin-top: 40px;
+}
+
+#now-start{
+    background-color: var(--background-color-gray);
+    height: 444px;
+    position: relative;
+    overflow: hidden;
+}
+#now-start>p{
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--font-gray);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.count-up{
+    color: var(--main-color);
+}
+
+#now-start .accent{
+    color: var(--main-color);
+}
+
+#now-start::after{
+    display: block;
+    content: '';
+    height: 100%;
+    width: 50%;
+    background-color: #0BB8FF;
+    transform: skewX(-30deg);
+    position: absolute;
+    right: -200px;
+}
+footer{
+    background-color: var(--footer-background);
+}
+.footer-con{
+    width: 980px;
+    margin: 0 auto;
+    padding-top: 48px;
+    padding-bottom: 96px;
+
+}
+
+.sns{
+    overflow: hidden;
+}
+
+.sns li{
+    float: left;
+    margin-right: 12px;
+}
+
+.footer-nav{
+    margin-top: 24px;
+    overflow: hidden;
+}
+.footer-nav li{
+    float: left;
+    margin-left: 24px;
+}
+
+.footer-nav a {
+    color: var(--font-footer-light);
+}
+
+.footer-nav .accent{
+    color: #fff;
+}
+.corp{
+    margin-top: 24px;
+    overflow: hidden;
+    color: var(--font-footer-dark);
+    font-size: 13px;
+
+}
+.corp>ul{
+    float: left;
+    width: 50%;
+}
+.corp li {
+    margin-top: 8px;
+
+}
+
+.crop dl{
+    overflow: hidden;
+}
+
+.crop dl>*{
+    float: left;
+}
+
+.corp dt {
+    margin-right: 4px;
+}
+
+.corp dt::after{
+    content: '.';
+}
+.corp-right a{
+    color: var(--font-footer-light);
+    text-decoration: underline;
+    display: inline;
 }
