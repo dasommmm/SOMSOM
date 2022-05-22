@@ -20,16 +20,17 @@ header li{
 }
 
 
-header span{
+.order{
     color: white;
     font-size: 14px;
-    margin: 15px;
+    margin-right: 28px;
 }
 
-figure{
+a figure{
     margin-top: -10px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
+
 .hidden {
     position: absolute;
     width: 1px;

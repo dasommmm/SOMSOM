@@ -59,7 +59,7 @@ h1 figure {
     display: block;
     content: '';
     background-color: white;
-    height: 4px;
+    height: 3px;
     width: 26px;
     margin-top: 10px;
 }
@@ -67,7 +67,7 @@ h1 figure {
     display: block;
     content: '';
     background-color: white;
-    height: 4px;
+    height: 3px;
     width: 26px;
     margin-top: 8px;
     margin-left: 10px;
@@ -103,10 +103,10 @@ h1 figure {
 
 .in-title {
     display: inline-block;
+    /* 하늘 점 찍으려고 */
     font-size: 40px;
     color: var(--font-black);
     font-weight: 900;
-    
     position: relative;
 }
 
@@ -120,6 +120,7 @@ h1 figure {
     position: absolute;
     right: -12px;
     bottom: 0;
+    /* 바닥선에 맞추기 위해 */
 }
 
 .in-contents {
@@ -167,7 +168,7 @@ h1 figure {
     background-color: #0BB8FF;
     transform: skewX(-30deg);
     position: absolute;
-    right: -200px;
+    right: -250px;
 }
 footer{
     background-color: var(--footer-background);
@@ -195,7 +196,7 @@ footer{
 }
 .footer-nav li{
     float: left;
-    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .footer-nav a {
@@ -217,7 +218,7 @@ footer{
     width: 50%;
 }
 .corp li {
-    margin-top: 8px;
+    margin-bottom: 8px;
 
 }
 
@@ -233,10 +234,10 @@ footer{
     margin-right: 4px;
 }
 
-.corp dt::after{
-    content: '.';
+.corp dt::after {
+    content:'.';
 }
-.corp-right a{
+.corp-right a {
     color: var(--font-footer-light);
     text-decoration: underline;
     display: inline;
