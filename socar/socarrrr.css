@@ -232,6 +232,7 @@ footer{
 
 .corp dt {
     margin-right: 4px;
+    /* 뭐가 바뀌는거? */
 }
 
 .corp dt::after {
