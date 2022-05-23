@@ -1,0 +1,35 @@
+:root{
+    --background-color-white:#ffffff;
+    --font-blue:rgba(88, 101, 242, 1);
+    --font-gray:#4f545c;
+    --background-color-gray: #f2f2f2;
+    --footer-gray:#4f545c;
+    --footer-button:#3BA55C;
+    --footer-font-gray:#ffffff;
+}
+.heading-wrapper{
+    width: 100%;
+    height: 71px;
+    padding: 0 5%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--background-color-white);
+    color: var(--font-blue);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav{
+    box-sizing: border-box;
+    display: flex;
+    
+}
+
+header li{
+    float: left;
+}
