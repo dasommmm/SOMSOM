@@ -8,6 +8,10 @@
     --footer-font-gray:#ffffff;
 }
 
+html{
+    font-family: font-family: Whitney,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;;
+}
+
 header {
     background-color: var(--background-color-white);
 
@@ -61,6 +65,10 @@ nav a {
     /* 700이상일때 적용하겠다는 의미 */
 }
 
+main{
+    height: 2000px;
+    background-color: var(--background-color-white);
+}
 .main-con{
     background-image:url(/discord/discord-img/back.png);
     background-position: center center;
@@ -91,6 +99,110 @@ nav a {
 }
 
 .search-con{
+    background-color: var(--background-color-white);
     width: 610px;
     height: 40px;
+    display: flex;
+    border: 1px solid #666;
+    position: relative;
+    /* box-sizing: border-box; */
+    overflow: hidden;
+    border-radius: 30px;
+    
 }
+.search-con figure{
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 15px;
+    z-index: 1;
+    color: #777;
+    overflow: hidden;
+    
+}
+input{
+    border: 0;
+    width: 610px;
+    height: 40px;
+    padding: 1px 20px 1px 40px;
+    box-sizing: border-box;   
+}
+
+.need{
+    background-color: var(--background-color-white);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--font-gray);
+
+}
+
+.accent{
+    color: var(--font-blue);
+}
+
+.need h2{
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 100%;
+    font-family: Whitney,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+   
+}
+
+.need p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.category-wrap{
+    height: 1120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* heigth 몇 줘야하나요ㅜㅜ 두개라서 어려워요 */
+}
+.category-wrap li{
+    display: flex;
+    flex-direction: column;
+    /* display: inline-block; */
+    justify-content: space-between;
+    align-self: center;
+    background: white;
+    box-shadow: 0px 9px 30px rgb(200 200 200 / 30%);
+    padding: 5px;
+    width: 240px;
+    height: 240px;
+    margin: 10px;
+    color: #ccc;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    border-radius: 5px;
+    transition: box-shadow .3s, border-color .3s;
+    /* shadow 모르겠어요 */
+    
+}
+
+.category-wrap h2{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--font-blue);
+}
+
+.category-wrap p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--font-gray);
+}
+
+
+
+
