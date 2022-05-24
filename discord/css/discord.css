@@ -7,14 +7,19 @@
     --footer-button:#3BA55C;
     --footer-font-gray:#ffffff;
 }
+
+header {
+    background-color: var(--background-color-white);
+
+}
+
 .heading-wrapper{
-    width: 100%;
     height: 71px;
+    width: 90%;
     padding: 0 5%;
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
-    background-color: var(--background-color-white);
     color: var(--font-blue);
     font-size: 15px;
     font-weight: 400;
@@ -22,14 +27,70 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* heading-wrapper의 자식요소에만 flex주게 됨 */
 }
 
-.nav{
-    box-sizing: border-box;
+nav{
+    
     display: flex;
+    color: var(--font-blue);
     
 }
 
-header li{
-    float: left;
+nav > ul {
+    display: flex;
+    padding: 0 15px;
+}
+
+nav a {
+    color: var(--font-blue);
+    font-size: 14px;
+    padding: 0 10px;
+    font-weight: 400;
+    display: flex;
+    align-items: flex-end;
+    margin: 10px;
+}
+
+
+
+@media screen and (max-width:700px){
+    nav>ul{
+        display: none;
+    }
+    /* 700이상일때 적용하겠다는 의미 */
+}
+
+.main-con{
+    background-image:url(/discord/discord-img/back.png);
+    background-position: center center;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .title{
+    display: flex;
+    flex-direction: column;
+} */
+
+.main-heading{
+    font-size: 36px;
+    line-height: 44px;
+    color: var(--footer-font-gray);
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 35px 0 0 0;
+    text-align: center;
+    font-family: Whitney,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+}
+
+.search-con{
+    width: 610px;
+    height: 40px;
 }
