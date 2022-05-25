@@ -70,7 +70,7 @@ main{
     background-color: var(--background-color-white);
 }
 .main-con{
-    background-image:url(/discord/discord-img/back.png);
+    background-image:url(../discord-img/back.png);
     background-position: center center;
     background-size: cover;
     height: 300px;
