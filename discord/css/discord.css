@@ -19,7 +19,7 @@ header {
 
 .heading-wrapper{
     height: 71px;
-    max-width: 1060px;
+    /* max-width: 1060px; */
     width: 90%;
     /* padding: 0 5%; */
     margin: 0 auto;
@@ -66,11 +66,19 @@ nav a {
     /* 700이상일때 적용하겠다는 의미 */
 }
 
+@media (min-width: 1024px)
+  {body>main{
+    min-height: 65vh;
+    }
+}
+
 main{
     /* height: 1500px; */
-    padding: 20px;
+    margin-bottom: 100px;
     background-color: var(--background-color-white);
 }
+
+
 .main-con{
     background-image:url(../discord-img/back.png);
     background-position: center center;
@@ -146,7 +154,7 @@ input{
 
 .accent{
     color: var(--font-blue);
-    
+    display: inline-block;
 }
 
 .need h2{
@@ -165,15 +173,8 @@ input{
     line-height: 1.5;
 }
 
-.category-wrap ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-/* flex-warp:warp 넘칠때 사용 */
-
-
-/* .category-wrap{ */
+.category-wrap{
+    padding: 0 5px 0 5px;
     /* height: 1120px; 주면 안됨 자연스럽게 내려오는게 안됨 */
     /* display: flex; 안해도됨 */
     /* align-items: center;
@@ -181,20 +182,70 @@ input{
     /* heigth 몇 줘야하나요ㅜㅜ 두개라서 어려워요 */
     /* overflow: hidden; float쓸때 사용 */
     /* box-sizing: border-box; */
-/* } */
+}
+
+.category-wrap ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* flex-warp:warp 넘칠때 사용 */
 
 .category-wrap .small-tit{
     font-size: 22px;
     text-align: center;
-    padding-top: 20px;
-
-    
+    padding-top: 50px;
+    padding-bottom: 15px;
+    line-height: 1.5;
 }
 
-
 .category-wrap .notice{
-    background-image: url(../discord-img/1bd76d1fd516f8dacd3c7422a8ceb929ef2502d9.svg);
-    
+    background-image: url(../discord-img/1bd76d1fd516f8dacd3c7422a8ceb929ef2502d9.svg);   
+}
+
+.category-wrap .discord{
+    background-image: url(../discord-img/discord-in.svg);
+}
+
+.category-wrap .setting{
+    background-image: url(../discord-img/set.svg);
+
+}
+
+.category-wrap .start{
+    background-image: url(../discord-img/start.svg);
+}
+
+.category-wrap .server{
+    background-image: url(../discord-img/server.svg);
+}
+
+.category-wrap .community{
+    background-image: url(../discord-img/community.svg);
+}
+
+.category-wrap .nitro{
+    background-image: url(../discord-img/nitro.svg);
+}
+
+.category-wrap .bill{
+    background-image: url(../discord-img/bill.svg);
+}
+
+.category-wrap .security{
+    background-image: url(../discord-img/security.svg);
+}
+
+.category-wrap .question{
+    background-image: url(../discord-img/ques.svg);
+}
+
+.category-wrap .game{
+    background-image: url(../discord-img/game.svg);
+}
+
+.category-wrap .twitter{
+    background-image: url(../discord-img/twi.svg);
 }
 
 .category-wrap li{
@@ -224,6 +275,9 @@ input{
     flex-direction: column;
     justify-content: flex-end;
     height: 100%;
+    width: 200px;
+    text-align: center;
+
 }
 
 /* 이미지 자체가 클릭되게 하려면?  a에 display: flex;
@@ -240,22 +294,26 @@ after top 조절해서 정렬 맞춰줌 */
     height: 70px;
 }
 
+*{
+    box-sizing: border-box;
+}
 
-.category-wrap p{
+.category-wrap ul p{
     font-size: 14px;
     font-weight: 400;
-    color: var(--font-gray);
+    color: #68727E;
     height: 54px;
+    width: 200px;
     
 }
 .category-wrap li::after{
     width: 50px;
-    height: 1px;
-    background-color: gray;
+    height: 1.5px;
+    background-color: #cccccc;
     position: absolute;
     content: '';
     display: block;
-    top: 157px;
+    top: 160px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -263,6 +321,78 @@ after top 조절해서 정렬 맞춰줌 */
 .category-grey li{
     width: 260px;
     background-color:#f2f2f2;
+    
 }
 
+.category-grey p{
+    margin-left: 15px ;
+    /* margin: 0 auto; */
+}
 
+.category-grey h2{
+    margin-left: 15px ;
+}
+/* 이 부분 이렇게 하면 되나요ㅜㅜ😂 */
+
+.footer-con{
+    background-color: var(--footer-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    width: 250px;
+    height: 42px;
+    background-color: #3BA55C;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 50px 0;
+    
+}
+
+.apps-con{
+    background-image: url(../discord-img/phone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 814px;
+    height: 145px;
+    background-size: 80%;
+    box-sizing: border-box;
+}
+
+.apps{
+    display: flex;
+    /* align-items: center; */
+    /* margin: 0 auto; */
+    /* justify-content: space-between; */
+    /* width: 600px;
+    margin-top: 50px; */
+    position: absolute;
+    
+
+}
+
+.ipad{
+    display: flex;
+}
+
+footer a{
+    
+}
+
+.footer-nav{
+    display: flex;
+}
+
+.nav-left{
+    
+}
+
+.nav-right{
+    display: flex;
+    align-content: space-between;
+}
