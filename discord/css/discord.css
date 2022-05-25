@@ -9,7 +9,7 @@
 }
 
 html{
-    font-family: font-family: Whitney,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;;
+    font-family: Whitney,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
 }
 
 header {
@@ -19,8 +19,9 @@ header {
 
 .heading-wrapper{
     height: 71px;
+    max-width: 1060px;
     width: 90%;
-    padding: 0 5%;
+    /* padding: 0 5%; */
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
@@ -66,7 +67,8 @@ nav a {
 }
 
 main{
-    height: 2000px;
+    /* height: 1500px; */
+    padding: 20px;
     background-color: var(--background-color-white);
 }
 .main-con{
@@ -144,6 +146,7 @@ input{
 
 .accent{
     color: var(--font-blue);
+    
 }
 
 .need h2{
@@ -162,47 +165,104 @@ input{
     line-height: 1.5;
 }
 
-.category-wrap{
-    height: 1120px;
+.category-wrap ul{
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    /* heigth 몇 줘야하나요ㅜㅜ 두개라서 어려워요 */
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.category-wrap li{
-    display: flex;
-    flex-direction: column;
-    /* display: inline-block; */
-    justify-content: space-between;
-    align-self: center;
-    background: white;
-    box-shadow: 0px 9px 30px rgb(200 200 200 / 30%);
-    padding: 5px;
-    width: 240px;
-    height: 240px;
-    margin: 10px;
-    color: #ccc;
-    font-weight: bold;
-    font-size: 3em;
+/* flex-warp:warp 넘칠때 사용 */
+
+
+/* .category-wrap{ */
+    /* height: 1120px; 주면 안됨 자연스럽게 내려오는게 안됨 */
+    /* display: flex; 안해도됨 */
+    /* align-items: center;
+    flex-direction: column; */
+    /* heigth 몇 줘야하나요ㅜㅜ 두개라서 어려워요 */
+    /* overflow: hidden; float쓸때 사용 */
+    /* box-sizing: border-box; */
+/* } */
+
+.category-wrap .small-tit{
+    font-size: 22px;
     text-align: center;
+    padding-top: 20px;
+
+    
+}
+
+
+.category-wrap .notice{
+    background-image: url(../discord-img/1bd76d1fd516f8dacd3c7422a8ceb929ef2502d9.svg);
+    
+}
+
+.category-wrap li{
+    background-repeat: no-repeat;
+    background-position: center 15px;
+    background-size: 40%;
+    box-sizing: border-box;
+    /* background: white; */
+    /* 백그러운더 컬러로 줘야함 */
+    position: relative;
+    box-shadow: 0px 9px 30px rgb(200 200 200 / 30%);
+    padding: 20px;
+    width: 240px;
+    height: 260px;
+    margin: 10px;
+    text-align: center;
+    line-height: 1.5;
     border-radius: 5px;
     transition: box-shadow .3s, border-color .3s;
     /* shadow 모르겠어요 */
     
 }
 
+.category-wrap a{
+    /* li에 넣지 않고 a에 넣어주면 클릭 가능 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+/* 이미지 자체가 클릭되게 하려면?  a에 display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 줘서 크기 크게함 */
+
+    /* h2 p height 
+after top 조절해서 정렬 맞춰줌 */
+
 .category-wrap h2{
     font-size: 22px;
     font-weight: 400;
     color: var(--font-blue);
+    height: 70px;
 }
+
 
 .category-wrap p{
     font-size: 14px;
     font-weight: 400;
     color: var(--font-gray);
+    height: 54px;
+    
+}
+.category-wrap li::after{
+    width: 50px;
+    height: 1px;
+    background-color: gray;
+    position: absolute;
+    content: '';
+    display: block;
+    top: 157px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-
+.category-grey li{
+    width: 260px;
+    background-color:#f2f2f2;
+}
 
 
