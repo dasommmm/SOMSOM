@@ -3,7 +3,7 @@
     --font-blue:rgba(88, 101, 242, 1);
     --font-gray:#4f545c;
     --background-color-gray: #f2f2f2;
-    --footer-gray:#4f545c;
+    --footer-background: #23272A;
     --footer-button:#3BA55C;
     --footer-font-gray:#ffffff;
 }
@@ -71,9 +71,10 @@ nav a {
     min-height: 65vh;
     }
 }
+/* 1024보다 적어지면 main크기 최소65 */
+
 
 main{
-    /* height: 1500px; */
     margin-bottom: 100px;
     background-color: var(--background-color-white);
 }
@@ -115,11 +116,10 @@ main{
     display: flex;
     border: 1px solid #666;
     position: relative;
-    /* box-sizing: border-box; */
     overflow: hidden;
     border-radius: 30px;
-    
 }
+
 .search-con figure{
     width: 18px;
     height: 18px;
@@ -248,6 +248,9 @@ input{
     background-image: url(../discord-img/twi.svg);
 }
 
+/* 백그라운드에 이미지 넣으면 장점 분기점에 따라 이미지 다른거 넣을 수도 있고 자유로움
+html구조에서 크기를 잘 못잡는게 단점 */
+
 .category-wrap li{
     background-repeat: no-repeat;
     background-position: center 15px;
@@ -257,7 +260,7 @@ input{
     /* 백그러운더 컬러로 줘야함 */
     position: relative;
     box-shadow: 0px 9px 30px rgb(200 200 200 / 30%);
-    padding: 20px;
+    /* padding: 20px; */
     width: 240px;
     height: 260px;
     margin: 10px;
@@ -275,9 +278,11 @@ input{
     flex-direction: column;
     justify-content: flex-end;
     height: 100%;
-    width: 200px;
+    /* width: 200px; */
     text-align: center;
-
+    /* margin: 0 auto; */
+    padding: 20px;
+    /* p랑h2에 margin 말고 a에 margin0auto */
 }
 
 /* 이미지 자체가 클릭되게 하려면?  a에 display: flex;
@@ -302,8 +307,8 @@ after top 조절해서 정렬 맞춰줌 */
     font-size: 14px;
     font-weight: 400;
     color: #68727E;
-    height: 54px;
-    width: 200px;
+    height: 63px;
+    /* width: 200px; */
     
 }
 .category-wrap li::after{
@@ -320,22 +325,13 @@ after top 조절해서 정렬 맞춰줌 */
 
 .category-grey li{
     width: 260px;
-    background-color:#f2f2f2;
+    background-color:var(--background-color-gray);
     
 }
 
-.category-grey p{
-    margin-left: 15px ;
-    /* margin: 0 auto; */
-}
-
-.category-grey h2{
-    margin-left: 15px ;
-}
-/* 이 부분 이렇게 하면 되나요ㅜㅜ😂 */
 
 .footer-con{
-    background-color: var(--footer-gray);
+    background-color: var(--footer-background);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,38 +347,56 @@ button{
     font-size: 16px;
     font-weight: 600;
     margin: 50px 0;
+    cursor: pointer;
     
-}
-
-.apps-con{
-    background-image: url(../discord-img/phone.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 814px;
-    height: 145px;
-    background-size: 80%;
-    box-sizing: border-box;
 }
 
 .apps{
+    background-image: url(../discord-img/phone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 814px 145px;
+    width: 814px;
+    height: 145px;
+    box-sizing: border-box;
     display: flex;
-    /* align-items: center; */
-    /* margin: 0 auto; */
-    /* justify-content: space-between; */
-    /* width: 600px;
-    margin-top: 50px; */
+    position: relative;
+}
+
+/* 백그라운드에 이미지 넣으면 장점 분기점에 따라 이미지 다른거 넣을 수도 있고 자유로움
+html구조에서 크기를 잘 못잡는게 단점 */
+
+
+
+.footer-icon{
     position: absolute;
-    
-
+    top: 72px;
 }
 
-.ipad{
-    display: flex;
+/* a.browser a에있는 browser
+   h2랑 p 둘다 h2,p */
+
+.browser{
+    left: 90px;
 }
 
-footer a{
-    
+.galaxy{
+    left: 379px;
 }
+
+.apple{
+    left : 470px;
+}
+
+.window{
+    left: 630px;
+}
+
+.xor{
+    left: 690px;
+}
+
+/* hover transition이용해서 반짝이게 만들기 */
 
 .footer-nav{
     display: flex;
