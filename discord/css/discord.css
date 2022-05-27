@@ -138,6 +138,8 @@ input{
     height: 40px;
     padding: 1px 20px 1px 40px;
     box-sizing: border-box;   
+    outline: none;
+    /* input 기본값 ouline 없애줌 */
 }
 
 .need{
@@ -183,6 +185,7 @@ input{
     /* overflow: hidden; float쓸때 사용 */
     /* box-sizing: border-box; */
 }
+
 
 .category-wrap ul{
     display: flex;
@@ -269,8 +272,16 @@ html구조에서 크기를 잘 못잡는게 단점 */
     border-radius: 5px;
     transition: box-shadow .3s, border-color .3s;
     /* shadow 모르겠어요 */
-    
+    background-color: var(--background-color-white);
+    transition: 0.5s;
 }
+
+.category-wrap li:hover{
+    transform: translateY(-10px);
+    /* 위로 올라가면 -줘야함*/
+}
+
+
 
 .category-wrap a{
     /* li에 넣지 않고 a에 넣어주면 클릭 가능 */
@@ -337,7 +348,7 @@ after top 조절해서 정렬 맞춰줌 */
     align-items: center;
 }
 
-button{
+footer button{
     width: 250px;
     height: 42px;
     background-color: #3BA55C;
@@ -348,6 +359,7 @@ button{
     font-weight: 600;
     margin: 50px 0;
     cursor: pointer;
+    /* button cursor 꼭 넣어줘!!! */
     
 }
 
@@ -372,7 +384,7 @@ html구조에서 크기를 잘 못잡는게 단점 */
     position: absolute;
     top: 60px;
     opacity: 50%;
-    transition: 1s;
+    transition: 0.5s;
 }
 /* transition hover에 주면 마우스 뗄 때 안먹힘 */
 .footer-icon:hover{
@@ -406,9 +418,13 @@ html구조에서 크기를 잘 못잡는게 단점 */
 
 .footer-nav{
     display: flex;
-    align-items: center;
+    /* align-items: center; 필요없음 위에 붙어서*/
+    justify-content: space-between;
+    /* between으로 사이 벌려줌 */
     padding: 0 30px 50px 30px;
-    border-top: 1px solid var(--footer-font-gray);
+    border-top: 1px solid rgba(219,221,225,.1);
+    padding-top: 50px;
+    /* padding top으로 띄어줌 */
     width: 1100px;
     height: 205px;
 }
@@ -423,14 +439,56 @@ html구조에서 크기를 잘 못잡는게 단점 */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    
-    
+}
+
+.nav-right li {
+    width: 200px;
+    height: 30px;
+    /* 각 칸의 크기를 줘서 띄움*/
+}
+
+.nav-right li a{
+    color: var(--footer-font-gray);
+    transition: 0.3s;
+    opacity: 0.3;
+}
+
+.nav-right li a:hover{
+    opacity: 1;
 }
 
 .nav-right ul{
     flex-direction: column;
     display: flex;
-    
-
 }
 
+.nav-right li .accent{
+    color: #3BA55C;
+    opacity: 1;
+}
+
+
+.launcher{
+    position: fixed; 
+    bottom: 21px;
+    right: 23px;
+}
+
+.launcher button{
+    /* padding: 25px; */
+    justify-content: center;
+    /* 왼쪽으로 붙은애들 가운데로 */
+    display: flex;
+    align-items: center;
+    width: 134px;
+    height: 45px;
+    background-color: #5865f2; 
+    color: #ffffff;
+    fill: #ffffff; 
+    font-size: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+}
+
+.launcher span{margin-left: 5px;}
