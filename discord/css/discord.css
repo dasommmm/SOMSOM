@@ -57,6 +57,19 @@ nav a {
     margin: 10px;
 }
 
+.hamberger{
+    display: block;
+    /* block말고 none으로하고 반응형에 block */
+    padding: 4px 0 0 0;
+    /* 원래 속성 뭐지 */
+    background-color: transparent;
+    border: none;
+    /* stroke: var(--font-blue); */
+    color: var(--font-blue);
+    align-content: center;
+    cursor: pointer;
+    
+}
 
 
 @media screen and (max-width:700px){
@@ -264,6 +277,7 @@ html구조에서 크기를 잘 못잡는게 단점 */
     position: relative;
     box-shadow: 0px 9px 30px rgb(200 200 200 / 30%);
     /* padding: 20px; */
+    /* padding으로 하면 클릭 안먹힘 a태그에 패딩주면 클릭 됨*/
     width: 240px;
     height: 260px;
     margin: 10px;
