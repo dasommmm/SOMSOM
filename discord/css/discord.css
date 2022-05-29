@@ -58,7 +58,7 @@ nav a {
 }
 
 .hamberger{
-    display: block;
+    display: none;
     /* block말고 none으로하고 반응형에 block */
     padding: 4px 0 0 0;
     /* 원래 속성 뭐지 */
@@ -76,8 +76,13 @@ nav a {
     nav>ul{
         display: none;
     }
-    /* 700이상일때 적용하겠다는 의미 */
+    nav>.hamberger{
+        display: block;
+    }
+    /* 0부터 700까지 적용하겠다는 의미 */
 }
+
+
 
 @media (min-width: 1024px)
   {body>main{
