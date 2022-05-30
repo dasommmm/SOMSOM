@@ -1,0 +1,117 @@
+:root{
+    --header-color:#666;
+    --font-color-grey:#444;
+    --font-color-black:#222;
+    --button-color-green:#21c531;
+    --font-color-white: #fafafa;
+    --background-color: #f6f8fa;
+}
+
+html{
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Segoe UI Symbol","Android Emoji",EmojiSymbols;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 68px;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.bandlogo {
+    background: url("../band_img/spr_intro.png") no-repeat 0 -98px;
+    /* url 맞나 확인헤주세요ㅜㅜㅜㅜ 절대 상대 경로 아직 모르나봐요 */
+    width: 78px;
+	height: 29px;
+    margin-left: 17px;
+    
+}
+
+.hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px,1px,1px,1px);
+    overflow: hidden;
+}
+
+.nav{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 17px;
+    
+}
+
+.nav li{
+    width: 90px;
+
+}
+
+.nav a{
+    color: var(--header-color);
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 400px;
+    
+}
+
+.nav li:nth-of-type(2){
+    color: #222;
+}
+/* 이거 왜 먹히지 않나요? */
+
+.nav button{
+    border: none;
+    width: 88px;
+    height: 35px;
+    border-radius: 3px;
+    background-color: var(--button-color-green);
+    color: var(--font-color-white);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+.language::after {
+    border-right: 3px solid transparent;
+    border-top: 3px solid gray;
+    border-left: 3px solid transparent;
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    margin: 1px;
+    top: 32px
+    /* 왜 top 32위치가 여기일까요?ㅜㅜ 어딜기준으로..? */
+   
+}
+
+#slogan{
+    display: flex;
+    
+}
+
+.phone figure{
+
+    width: 540px;
+    height: 695px;
+}
+
+.phone-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-right button{
+    display: block;
+
+}
+
+.guide a {
+    display: inline
+    /*reset에서 이미 block으로 처리했는데 다시 원래 속성으로 해도 되나요  */
+}
