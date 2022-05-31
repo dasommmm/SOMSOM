@@ -11,6 +11,13 @@ html{
     font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Segoe UI Symbol","Android Emoji",EmojiSymbols;
 }
 
+.link {
+    display: block;
+    height: 100%;
+    /* a를 굳이 block으로 바꾸지말고 link를 사용해서 a에 class를 주고 클릭 할 수 있는 크기 맞춰줌 */
+    /* 5.31 5분짜리 동영상참고 */
+}
+
 header{
     display: flex;
     flex-direction: row;
@@ -58,10 +65,10 @@ header{
     
 }
 
-.nav li:nth-of-type(2){
+.nav li:nth-of-type(2) a{
     color: #222;
 }
-/* 이거 왜 먹히지 않나요? */
+/* 이거 왜 먹히지 않나요? li 2번째에 있는 a를 바꿔야함*/
 
 .nav button{
     border: none;
@@ -91,12 +98,17 @@ header{
 }
 
 #slogan{
+    height: 770px;
+    background-color: var(--background-color);
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
 }
 
 .phone figure{
-
+    padding: 30px;
+    margin-right: 10px;
     width: 540px;
     height: 695px;
 }
@@ -106,12 +118,52 @@ header{
     flex-direction: column;
 }
 
-.phone-right button{
-    display: block;
+.phone-right h2{
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--font-color-black);
 
 }
 
+.phone-right p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--font-color-grey);
+    margin-top: 13px;
+    margin-bottom: 20px;
+}
+
+.phone-right button{
+    display: block;
+    border: none;
+    width: 340px;
+    height: 54px;
+    border-radius: 2px;
+    background-color: var(--button-color-green);
+    color: var(--font-color-white);
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.phone-right .white{
+    color: #222;
+    background-color: #fff;
+}
+
+.guide p{
+    font-size: 13px;
+    font-weight: 400;
+    color: #444;
+}
+
 .guide a {
-    display: inline
+    display: inline;
     /*reset에서 이미 block으로 처리했는데 다시 원래 속성으로 해도 되나요  */
+    color: var(--button-color-green);
+    font-weight: 700;
+    text-decoration: underline;
+    margin: 3px;
 }

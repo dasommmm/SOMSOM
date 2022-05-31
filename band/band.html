@@ -12,8 +12,8 @@
     <header>
         <!-- <div class="heading-wrapper"> -->
             <h1>
-                <a href="#" class="logo">
-                    <div class="bandlogo"></div>
+                <a href="#" class="bandlogo link">
+                    <!-- <div class="bandlogo"></div> -->
                     <span class="hidden">band</span>
                 </a>
                 <!-- 로고 이미지같은 경우에 sprite로 하면 무조건 css에서 background로 써야하나요 -->
@@ -40,20 +40,20 @@
             </div>
             <div class="phone-right">
                 <div class="login">
-                    <h2><p>모임이 쉬워진다!<br>우리끼리 밴드</p></h2>
-                    <p>당신의 모임도 band로 시작하세요.</p>
+                    <h2>모임이 쉬워진다!<br>우리끼리 밴드</h2>
+                    <p>당신의 모임도 BAND로 시작하세요.</p>
                     <button>로그인</button>
-                    <button>회원가입</button>
+                    <button class="white">회원가입</button>
                 </div>
                 <div class="guide">
-                    <p>내게 맞는 밴드를 만나려면 <a href="#" class="accent">밴드찾기</a></p>
+                    <p>내게 맞는 밴드를 만나려면 <a href="#" class="accent">밴드 찾기</a></p>
                     <p>모임별 밴드 활용법 <a href="#" class="accent">밴드 가이드 보기</a></p>
                 </div>
             </div>
         </section>
         <section id="picture">
             <div class="picture-box">
-                <h3><p>모임을 위한 공간, 밴드</p></h3>
+                <h3>모임을 위한 공간, 밴드</h3>
                 <p>밴드는 그룹 멤버와 함께 하는 공간입니다.<br>동호회,스터디,주제별 모임을 밴드로 시작하세요.</p>
             </div>
         </section>
@@ -92,8 +92,10 @@
                     <div class="right">
                         <a href="#" class="recommend-title">
                             <p>긍정의 확언</p>
-                        </a>
-                        <p>멤버<span class="member">433</span>
+                        </a> 
+                        <!-- a를 p 멤버리더 밑으로 빼는게 좋을지 묻지 -->
+                        <p>
+                            멤버<span class="member">433</span>
                             리더<span class="leader">성장</span>
                         </p>
                         <button class="cards-but"><span class="accent">긍정확언</span>밴드 더보기</button>
@@ -108,7 +110,8 @@
                             <p>매일 10분 영어 필사</p>
                             <p>영어 필사는 해외에서 석사 논문을 쓸 때 많은 도움을 줬던 공...</p>
                         </a>
-                        <p>멤버<span class="member">783</span>
+                        <p>
+                            멤버<span class="member">783</span>
                             리더<span class="leader">로즈 Rose Teacher</span>
                         </p>
                         <button class="cards-but"><span class="accent">영어필사</span>밴드 더보기</button>
@@ -247,6 +250,8 @@
                 <a href="#"><span class="hidden">google</span></a>
                 <a href="#"><span class="hidden">apple</span></a>
             </div>
+            <!-- 만약 figure 안에 img랑 a 가 함께 있다면 absolute 주ㅓ서 따로 되지 않고 클릭 가능하게 조정해줘야함 -->
+            <!-- figure 넣고 css에 back-img 로 사진 넣어서 border radius쓸 수 있음 -->
         </section>
     </main>
     <footer>
@@ -258,13 +263,16 @@
         <nav>
             <a href="#">블로그</a>
             <a href="#">공지사항</a>
-            <a href="">스티커제안</a>
-            <a href="">광고</a>
-            <a href="">이용약관</a>
-            <a href="" class="accent">개인정보처리방침</a>
-            <a href="">쿠키 설정</a>
-            <a href="">CCPA 개인 정보 관리</a>
-            <a href="">청소년 보호를 위한 노력</a><a href=""></a><a href=""></a><a href=""></a><a href=""></a>
+            <a href="#">스티커제안</a>
+            <a href="#">광고</a>
+            <a href="#">이용약관</a>
+            <a href="#" class="accent">개인정보처리방침</a>
+            <a href="#">쿠키 설정</a>
+            <a href="#">CCPA 개인 정보 관리</a>
+            <a href="#">청소년 보호를 위한 노력</a>
+            <a href="#">활동정책</a>
+            <a href="#">권리침해 신고안내</a>
+            <a href="#">개발자</a><a href="#"></a>
         </nav>
         <P>BAND ⓒ 2022</P>
     </footer>
