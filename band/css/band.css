@@ -4,11 +4,13 @@
     --font-color-black:#222;
     --button-color-green:#21c531;
     --font-color-white: #fafafa;
-    --background-color: #f6f8fa;
+    --background-color: #fff;
+    --background-color-gray:#eef0f3;
 }
 
 html{
     font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Segoe UI Symbol","Android Emoji",EmojiSymbols;
+    /* background-color: var(--background-color); */
 }
 
 .link {
@@ -74,7 +76,7 @@ header{
     border: none;
     width: 88px;
     height: 35px;
-    border-radius: 3px;
+    border-radius: 2px;
     background-color: var(--button-color-green);
     color: var(--font-color-white);
     font-weight: 700;
@@ -150,7 +152,7 @@ header{
 
 .phone-right .white{
     color: #222;
-    background-color: #fff;
+    background-color: var(--background-color);
 }
 
 .guide p{
@@ -160,10 +162,136 @@ header{
 }
 
 .guide a {
-    display: inline;
-    /*reset에서 이미 block으로 처리했는데 다시 원래 속성으로 해도 되나요  */
     color: var(--button-color-green);
     font-weight: 700;
     text-decoration: underline;
     margin: 3px;
+}
+
+#picture{
+    background: url(../band_img/bg_intro.jpg) 50% 50% no-repeat;
+    /* 이게 뭔뜻이에여,,, */
+    /* 이미지 크기를 주는 대신 50%씩 주고 안에 h3,p에 크기줘서 가운데 정렬 */
+    display: block;
+    background-size: cover;
+}
+
+#picture .picture-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 540px;
+    /* 정렬을위해 height줌 */
+
+
+}
+
+.picture-title h3{
+    font-size: 42px;
+    font-weight: 500;
+    text-shadow: 0 1px 1px rgb(0 0 0 / 11%);
+    color: var(--font-color-white);
+    letter-spacing: -1px;
+    margin: 10px;
+}
+
+.picture-title p{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--font-color-white);
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+.introduce-wapper{
+    /* box-sizing: border-box; */
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    /* margin으로 주면 background안 넣어짐 */
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+.intro li{
+    align-items: center;
+    /* width: 350px;
+    height: 300px; */
+    margin: 30px;
+}
+
+.intro img{
+    width: 300px;
+    height: 160px;
+}
+
+.intro .title{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--font-color-black);
+    margin-top: 10px;
+
+}
+
+.intro p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #444;
+    margin-top: 6px;
+    line-height: 1.6;
+}
+
+/* 인트로 이 사진 세개 줄이면 여백이 생겨요!
+원래 사이트는 여백없음 */
+
+#cards-wrapper{
+    background-color: var(--background-color-gray);
+    width: 100%;
+    
+}
+
+.recommend{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    /* align items와 content의 차이 알려주세요 */
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 46px;
+    padding-bottom: 19px;
+}
+
+.recommend h2{
+    font-size: 24px;
+    color:var(--font-color-black);
+}
+
+.recommend p{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--font-color-black);
+    position: relative;
+    
+}
+
+.recommend::after{
+    position: absolute;
+    bottom: 0;
+    content: '';
+    width: 6px;
+    height: 10px;
+    background-size: 692px auto;
+    background-image: url(../band_img/spr_icons_2x.png);
+    background-position: -686px -237px;
 }
