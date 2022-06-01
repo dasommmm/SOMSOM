@@ -26,7 +26,7 @@ header{
     justify-content: space-between;
     height: 68px;
     align-items: center;
-    background-color: var(--background-color);
+    background-color: #f6f8fa;
 }
 
 .bandlogo {
@@ -101,7 +101,7 @@ header{
 
 #slogan{
     height: 770px;
-    background-color: var(--background-color);
+    background-color: #f6f8fa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,10 +213,11 @@ header{
 
 .intro{
     display: flex;
-    justify-content: center;
-    padding: 30px;
-    /* margin으로 주면 background안 넣어짐 */
-    width: 1200px;
+    justify-content: space-between;
+    /* center말고 between 주면 옆에 여백 없애기 가능 */
+    padding: 60px 0;
+    /* margin으로 주면 background color안 넣어짐 */
+    width: 1000px;
     margin: 0 auto;
 
 }
@@ -225,7 +226,7 @@ header{
     align-items: center;
     /* width: 350px;
     height: 300px; */
-    margin: 30px;
+    /* margin: 30px; */
 }
 
 .intro img{
@@ -268,6 +269,7 @@ header{
     margin: 0 auto;
     padding-top: 46px;
     padding-bottom: 19px;
+    position: relative;
 }
 
 .recommend h2{
@@ -281,11 +283,11 @@ header{
     font-size: 14px;
     font-weight: 400;
     color: var(--font-color-black);
-    position: relative;
+    margin-right: 8px;
     
 }
 
-.recommend::after{
+/* .recommend::after{
     position: absolute;
     bottom: 0;
     content: '';
@@ -294,4 +296,154 @@ header{
     background-size: 692px auto;
     background-image: url(../band_img/spr_icons_2x.png);
     background-position: -686px -237px;
+} */
+
+.recommend a{
+    display: flex;
+    align-items: center;
 }
+
+.recommend a:hover p{
+    text-decoration: underline;
+}
+/* a를 호버하면 p에 */
+
+.recommend figure{
+    /* 이거 어떻게 해요ㅜㅜ */
+    width: 6px;
+    height: 10px;
+    background-size: 692px auto;
+    background-image: url(../band_img/spr_icons_2x.png);
+    background-position: -686px -237px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    /* 언제 wrap해주는지 */
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+    /* width없애고 justify center줘도 가능한데 대신 늘리면 가로 세칸생김 */
+    padding-bottom: 50px;
+}
+
+.cards li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 101px;
+    margin-bottom: 25px;
+}
+
+.cards img{
+    width: 93px;
+    height: 93px;
+}
+
+.right{
+    position: relative;
+    width: 400px;
+    margin: 10px;
+}
+
+.recommend-title{
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    padding-bottom: 5px;
+}
+
+.right p:nth-of-type(2){
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    padding-bottom: 5px;
+}
+
+.count{
+    line-height: 1.5;
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+    padding-bottom: 5px;
+}
+
+.cards-but{
+    border: none;
+    cursor: pointer;
+    height: 26px;
+    padding: 0 10px 0 9px;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 100px;
+    line-height: 23px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #777;
+}
+
+.accent{
+    font-weight: 700;
+    color: #333333;
+    padding: 2px;
+}
+
+.app{
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.app-left{
+    display: flex;
+
+}
+
+.app-left a{
+    background: url('../band_img/spr_intro.png') no-repeat -162px 0;
+	width: 70px;
+	height: 70px;
+}
+
+.download{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.download h3{
+    font-size: 23px;
+    color: #222;
+    padding-bottom: 10px;
+}
+
+.download p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+}
+
+
+.app-right{
+   display: flex;
+}
+
+.google{
+    background: url('../band_img/spr_intro.png') no-repeat 0 0;
+	width: 160px;
+	height: 47px;
+    margin-right: 10px;
+}
+
+.apple{
+    background: url('../band_img/spr_intro.png') no-repeat 0 -49px;
+	width: 160px;
+	height: 47px;
+}
+
