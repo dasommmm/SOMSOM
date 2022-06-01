@@ -82,7 +82,11 @@ header{
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
+    transition: 0.5s;
+}
 
+.nav button:hover{
+    box-shadow: 0 2px 8px 0 rgb(33 197 49 / 54%);
 }
 
 .language::after {
@@ -150,9 +154,19 @@ header{
     margin-bottom: 12px;
 }
 
+.phone-right button:hover{
+    box-shadow: 0 2px 8px 0 rgb(33 197 49 / 54%);
+}
+
+
 .phone-right .white{
     color: #222;
     background-color: var(--background-color);
+    transition: 0.5s;
+}
+
+.phone-right .white:hover{
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 15%)
 }
 
 .guide p{
@@ -284,6 +298,7 @@ header{
     font-weight: 400;
     color: var(--font-color-black);
     margin-right: 8px;
+    /* transition: 3s; */
     
 }
 
@@ -305,8 +320,12 @@ header{
 
 .recommend a:hover p{
     text-decoration: underline;
+    transition: 3s;
 }
 /* a를 호버하면 p에 */
+/* transition 안먹혀요ㅜㅜㅜ */
+
+
 
 .recommend figure{
     /* 이거 어떻게 해요ㅜㅜ */
@@ -370,6 +389,21 @@ header{
     padding-bottom: 5px;
 }
 
+.count span{
+    padding: 0 2px;
+    
+}
+
+.member::after{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    content: '';
+    background-color:#999;
+    display: inline-block;
+    transform: translate(3px,-3px);
+}
+
 .cards-but{
     border: none;
     cursor: pointer;
@@ -382,6 +416,11 @@ header{
     font-size: 12px;
     font-weight: 400;
     color: #777;
+}
+
+.cards-but:hover{
+    border-color: #a3a3a3;
+
 }
 
 .accent{
@@ -447,3 +486,121 @@ header{
 	height: 47px;
 }
 
+.cookie{
+    background-color: rgba(34, 34, 34, 0.96);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 30px;
+    font-size: 14px;
+    color: #fff; 
+    /* position: sticky;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 10000; */
+
+}
+
+.cookie .cookie-button{
+    display: flex;
+    
+}
+
+.cookie button{
+    margin: 3px;
+    width: 50px;
+    height: 26px;
+    background-color: #999;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.cookie .cookie-but-green{
+    background-color: var(--button-color-green);
+}
+
+.cookie-accent{
+    text-decoration: underline;
+    font-size: 14px;
+    color: rgba(255,255,255,.7);
+}
+
+.cookie-accent:hover{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1024px){
+.cookie{ height: auto;}
+}
+
+
+/* @supports (position: sticky){
+    .cookie{position: sticky;}
+} */
+
+/* 쿠키 스크롤 올리면 따라오는데 어떻게 하는거죠?? */
+nav{
+    min-width: 1000px;
+    min-height: 120px;
+    background-color: #2a3038;
+    padding-top: 24px;
+}
+
+.nav-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    width: 1000px;
+    height: 63px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav a{
+    font-size: 13px;
+    font-weight: 400;
+    color: #777;
+    
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+nav a::after{
+    content: '';
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: #b3b3b3;
+    display: inline-block;
+    margin: 8px 5px 0 10px;
+    transform: translateY(-3px);
+}
+
+.nav-accent{
+    color: #b3b3b3;
+    font-weight: 700;
+}
+
+nav p{
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 13px;
+    font-weight: 500;
+    color: #b3b3b3;
+    
+}
