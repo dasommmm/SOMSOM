@@ -82,7 +82,7 @@ header{
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .nav button:hover{
@@ -323,7 +323,7 @@ header{
     transition: 3s;
 }
 /* a를 호버하면 p에 */
-/* transition 안먹혀요ㅜㅜㅜ */
+/* transition 안먹혀요ㅜㅜㅜ 언더라인은 안먹힘 원래*/
 
 
 
@@ -486,15 +486,20 @@ header{
 	height: 47px;
 }
 
-.cookie{
+.cookie-wrapper{
     background-color: rgba(34, 34, 34, 0.96);
+}
+
+.cookie{
+    /* background-color: rgba(34, 34, 34, 0.96); */
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    padding: 0 380px;
     font-size: 14px;
     color: #fff; 
+    width: 1000px;
+    margin: 0 auto;
     /* position: sticky;
     position: fixed;
     bottom: 0;
@@ -557,21 +562,24 @@ nav{
 }
 
 .nav-wrapper{
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
     /* justify-content: center; */
     align-items: center;
     width: 1000px;
-    height: 63px;
+    height: 40px;
     box-sizing: border-box;
     margin: 0 auto;
-    text-align: center;
+    /* text-align: center; */
+    /* 굳이 flex안줘도 됨  */
 }
 
 nav a{
     font-size: 13px;
     font-weight: 400;
     color: #777;
+    display: inline-block;
+    /* 글씨 밑으로 잘려나가는거 방지 */
     
 }
 
@@ -586,8 +594,18 @@ nav a::after{
     border-radius: 50%;
     background-color: #b3b3b3;
     display: inline-block;
-    margin: 8px 5px 0 10px;
-    transform: translateY(-3px);
+    /* margin: 8px 5px 0 10px; */
+    /* transform: translateY(-3px); */
+    /* transform주지 말고 그냥 position 쓰기 밑에 3개 참고 */
+    position: relative;
+    top: -4px ;
+    margin: 0px 8px;
+
+}
+
+nav a:last-child::after{
+    display: none;
+    /* a의 마지막의 after는 없애기 */
 }
 
 .nav-accent{
