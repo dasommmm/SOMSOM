@@ -1,12 +1,20 @@
+:root{
 
+}
 
 header{
+    position: relative;
+    
+}
+
+.head{
+    position: fixed;
     height: 100px;
     width: 100%;
     background-image: url(../nonfiction-img/bg_header-01.png);
-    background-position: bottom center;
+    background-position: bottom;
     background-repeat: repeat-x;
-    position: fixed;
+    padding: 20px 0 10px 0;
 }
 
 .hidden {
@@ -17,7 +25,7 @@ header{
     overflow: hidden;
 }
 
-header>figure{
+.head>figure{
     width: 135px;
     height: 75.2px;
     position: absolute;
@@ -31,7 +39,18 @@ header>figure{
     position: absolute;
     right: 0;
     margin: 0 50px;
-    padding-top: 20px;
+}
+
+header .drop::after{
+    background-image: url(https://cdn.shopify.com/s/files/1/0575/6341/4580/files/left-arrow-svgrepo-com.svg?v=1647850513);
+    position: absolute;
+    top: 3px;
+    right: 180px;
+    content: '';
+    width: 12px;
+    height: 12px;
+    transform:rotate(-90deg);
+
 }
 
 .nav-wrapper a{
@@ -40,4 +59,55 @@ header>figure{
     /* font찾기 */
     padding-left: 40px;
     font-size: 18px;
+}
+
+.category-wrap{
+    /* position: absolute; */
+    padding-top: 20px;
+    left: 50px;
+    position: fixed;
+    /* absolute로 위치 주는 법 물어보기 */
+    font-size: 18px;
+}
+
+.category{
+    width: 190px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.category li{
+    color: #000;
+    line-height: 1.5;
+    font-weight: 400;
+    box-sizing: border-box;
+    /* 테두리값 넓이에 포함 */
+    cursor: pointer;
+}
+
+.submenu{
+    height: 0;
+    /* 마우스반응 있기 전에 보이면 안됨 */
+     overflow: hidden;
+     /* 높이만큼 보임 */
+     transition: 0.5s;
+     padding-left: 20px;
+     /* padding 줘서 공백 주는게 맞나요*/
+}
+
+.category li:hover .submenu{
+    height: auto;
+}
+
+.category a{
+    color: #000;
+    text-transform: uppercase;
+
+}
+
+.category-wrap input{
+    display: block;
+    margin-top: 50px;
+    
 }
