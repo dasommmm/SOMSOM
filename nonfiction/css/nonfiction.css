@@ -1,0 +1,43 @@
+
+
+header{
+    height: 100px;
+    width: 100%;
+    background-image: url(../nonfiction-img/bg_header-01.png);
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    position: fixed;
+}
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+}
+
+header>figure{
+    width: 135px;
+    height: 75.2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* left랑 transform기억하기 */
+}
+
+.nav-wrapper{
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin: 0 50px;
+    padding-top: 20px;
+}
+
+.nav-wrapper a{
+    font-family: 'FGR';
+    color: #000;
+    /* font찾기 */
+    padding-left: 40px;
+    font-size: 18px;
+}
