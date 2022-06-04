@@ -7,6 +7,9 @@
     <title>NONFICTION 논픽션</title>
     <link rel="stylesheet" href="css/nonfiction.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700%7CPoppins:400,500,700" rel="stylesheet">
+    <!-- 이거링크 무슨 뜻이에요? -->
 </head>
 <body>
     <header>
@@ -23,8 +26,8 @@
         </div>
         <div class="category-wrap">            
             <ul class="category">
-                <li>SHOP
-                    <ol class="submenu">
+                <li class="category-title shop">SHOP
+                    <ol class="submenu submenu-shop">
                         <li><a href="#">shop all</a></li>
                         <li><a href="#">best seller</a></li>
                         <li><a href="#">perfume</a></li>
@@ -36,16 +39,16 @@
                         <li><a href="#">acc</a></li>
                     </ol>
                 </li>
-                <li>ABOUT
-                    <ol class="submenu">
+                <li class="category-title about">ABOUT
+                    <ol class="submenu submenu-about">
                         <li><a href="#">our story</a></li>
                         <li><a href="#">campaign</a></li>
                         <li><a href="#">press</a></li>
                     </ol>
                 </li>
-                <li><a href="#">STORES</a></li>
-                <li>CONTACT
-                    <ol class="submenu">
+                <li class="category-title"><a href="#">STORES</a></li>
+                <li class="category-title contact">CONTACT
+                    <ol class="submenu submenu-contact">
                         <li><a href="#">cantact us</a></li>
                         <li><a href="#">careers</a></li>
                     </ol>
@@ -55,6 +58,7 @@
         </div>
     </header>
     <main>
+        <div class="section-wrapper">
         <section id="information">
             <figure>
                 <img src="nonfiction-img/1.jpg" alt="main">
@@ -63,7 +67,7 @@
                 <h3>FOR REST 
                     <br>BODY & HAND CARE LAUNCH
                 </h3> 
-                <p>포 레스트 바디 & 핸드케어 런칭</p>
+                <h4>포 레스트 바디 & 핸드케어 런칭</h4>
                 <p>
                     논픽션의 여섯 번째 시그니처 향으로 많은 사랑을 받은 포 레스트.
                     <br>
@@ -93,20 +97,23 @@
             <figure>
                 <img src="nonfiction-img/3.png" alt="men">
             </figure>
-            <h3>
-                A perfume created
-                <br>by BARNABÉ FILLION
-            </h3>
-            <p>
-                포 레스트는 향수를 상징과 미학의 관점으로 사유하는 프랑스의 마스터 퍼퓨머,
-                <br>바나베 피용(Barnabé Fillion)의 시적인 감각을 거쳐 완성되었습니다.
-                <br>
-                <br>향의 이름은 숲을 뜻하는 '포레스트 Forest'와 쉼, 휴식의 '포 레스트 FOR REST'를 중의적으로 담아냅니다.
-                <br>
-                <br>그 이미지 그대로, 아침 첫 햇살 속에 깨어나는 숲의 내음과 물기를 머금은 살결,
-                <br>미스터리한 우디 머스크의 뉘앙스가 논픽션과의 협업을 완성한 영감의 출발점입니다.
-            </p>
+            <div class="forest-perfume-wrap">
+                <h3>
+                    A perfume created
+                    <br>by BARNABÉ FILLION
+                </h3>
+                <p>
+                    포 레스트는 향수를 상징과 미학의 관점으로 사유하는 프랑스의 마스터 퍼퓨머,
+                    <br>바나베 피용(Barnabé Fillion)의 시적인 감각을 거쳐 완성되었습니다.
+                    <br>
+                    <br>향의 이름은 숲을 뜻하는 '포레스트 Forest'와 쉼, 휴식의 '포 레스트 FOR REST'를 중의적으로 담아냅니다.
+                    <br>
+                    <br>그 이미지 그대로, 아침 첫 햇살 속에 깨어나는 숲의 내음과 물기를 머금은 살결,
+                    <br>미스터리한 우디 머스크의 뉘앙스가 논픽션과의 협업을 완성한 영감의 출발점입니다.
+                </p>
+            </div>
        </section>
+       </div>
        <hr>
        <section id="collection">
            <h3>DISCOVER FOR REST collection</h3>

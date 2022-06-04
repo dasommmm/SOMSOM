@@ -1,3 +1,4 @@
+
 :root{
 
 }
@@ -41,16 +42,20 @@ header{
     margin: 0 50px;
 }
 
+.drop{
+    padding-right: 10px;
+}
+
 header .drop::after{
     background-image: url(https://cdn.shopify.com/s/files/1/0575/6341/4580/files/left-arrow-svgrepo-com.svg?v=1647850513);
     position: absolute;
     top: 3px;
-    right: 180px;
+    right: 192px;
     content: '';
     width: 12px;
     height: 12px;
     transform:rotate(-90deg);
-
+    
 }
 
 .nav-wrapper a{
@@ -59,6 +64,10 @@ header .drop::after{
     /* font찾기 */
     padding-left: 40px;
     font-size: 18px;
+}
+
+.nav-wrapper a:hover{
+    text-decoration: underline;
 }
 
 .category-wrap{
@@ -87,18 +96,39 @@ header .drop::after{
 }
 
 .submenu{
+    transition-duration: 1s;
     height: 0;
     /* 마우스반응 있기 전에 보이면 안됨 */
-     overflow: hidden;
-     /* 높이만큼 보임 */
-     transition: 0.5s;
-     padding-left: 20px;
-     /* padding 줘서 공백 주는게 맞나요*/
+    overflow: hidden;
+    /* 높이만큼 보임 */
+    padding-left: 20px;
+    /* padding 줘서 공백 주는게 맞나요*/
 }
 
-.category li:hover .submenu{
-    height: auto;
+.shop:hover .submenu-shop{
+    height: 300px;
 }
+
+.about:hover .submenu-about{
+    height: 135px;
+}
+
+.contact:hover .submenu-contact{
+    height: 135px;
+}
+
+/* 각각 height가 달라서 다 따로줌 이래도 되나요*/
+
+.category-title:hover .category-title{
+    text-decoration: underline;
+}
+/* 이건 왜 안먹힐까요ㅠㅠ */
+
+.category a:hover{
+    text-decoration: underline;
+}
+
+/* transition 안먹혀요 홈페이지는 active사용했는데 그게 뭐에요? */
 
 .category a{
     color: #000;
@@ -109,5 +139,102 @@ header .drop::after{
 .category-wrap input{
     display: block;
     margin-top: 50px;
+    border: 0;
+    background-color: transparent;
+    font-size: 18px;
+    color: #000;
+    /* 색깔 안바뀌어요ㅜㅜ 글씨치면 x아이콘 구려요*/
+    border-bottom: 1px solid #000;
     
 }
+
+input::-ms-input-placeholder { 
+    color: #000; 
+}
+/* // Internet Explorer 10 이상에 적용 */
+
+input::-webkit-input-placeholder {
+     color: #000;
+     } 
+/* //  Webkit, Blink, Edge에 적용 */
+
+input::-moz-placeholder { 
+    color: #000; 
+}
+/* // Mozilla Firefox에 적용 */
+
+main{
+    max-width: 990px;
+    margin: 0 auto;
+    padding-top: 240px;
+    text-align: center;
+}
+
+#information figure{
+    width: 920px;
+    height: 613px;
+    margin: 0 auto;
+}
+
+.launching{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+h3,h4{
+    font-weight: 400;
+}
+
+.section-wrapper h3{
+    font-size: 24px;
+}
+
+.section-wrapper p{
+    font-size: 14px;
+    padding-top: 50px;
+}
+
+
+.launching h4{
+    font-size: 17px;
+    padding-top: 16px;
+    
+}
+
+iframe{
+    width: 920px;
+    height: 517px;
+}
+
+.forest-info{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+#forest-perfume-info figure{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#forest-perfume-info figure img{
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.forest-perfume-wrap{
+    margin: 100px 0;
+}
+
+hr{
+    width: 920px;
+    height: 1px;
+    background-color: #D6D6D6;
+    border-style: none;
+}
+
