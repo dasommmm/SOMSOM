@@ -146,6 +146,14 @@ header .drop::after{
     /* 색깔 안바뀌어요ㅜㅜ 글씨치면 x아이콘 구려요*/
     border-bottom: 1px solid #000;
     
+    
+}
+
+input.hide-clear[type="search"]::-webkit-search-decoration,
+input.hide-clear[type="search"]::-webkit-search-cancel-button,
+input.hide-clear[type="search"]::-webkit-search-results-button,
+input.hide-clear[type="search"]::-webkit-search-results-decoration {
+  display: none; 
 }
 
 input::-ms-input-placeholder { 
@@ -238,3 +246,153 @@ hr{
     border-style: none;
 }
 
+
+#collection{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+#collection ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    margin: 0 45px;
+
+}
+
+
+#collection h3{
+    padding-bottom: 60px;
+    font-size: 24px;
+}
+
+.purchase{
+    padding: 0 25px 45px 25px;
+}
+
+.purchase img{
+    transition: 0.5s;
+}
+
+.purchase a:hover img{
+   /* a를 키워서 아래 글씨까지 클릭 가능하게 할 수 있나요? */
+    filter: blur(10px);
+}
+
+.purchase figure{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+
+}
+
+.purchase h2{
+    padding-top: 40px;
+    font-size: 17px;
+    line-height: 2;
+    
+}
+
+.purchase p{
+    padding-bottom: 30px;
+    font-size: 17px;
+}
+
+.purchase button{
+    width: 400px;
+    height: 43px;
+    background-color: white;
+    border: 1px solid #000;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+.perfume30 img,.perfume100 img{
+    width: 100%;
+    max-height: 426px;
+    /* 이런식으로 가운데 맞추는게 맞나요?ㅜㅜ알려주세요 */
+    object-fit: cover;
+}
+
+
+#membership-benefit{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#membership-benefit h3{
+    font-size: 24px;
+    padding-bottom: 16px;
+    
+}
+
+
+.membership-wrapper{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;   
+}
+
+.membership-wrapper figure{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    /* 사진이 규격보다 큰경우 히든해주고 보여주고 싶은부분 수정하려면 어떻게? */
+}
+
+.membership{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    /* height: 496px; */
+    line-height: 1.6;
+   
+}
+
+.membership p:first-of-type{
+    font-size: 17px;
+    margin-top: 60px;
+}
+
+.membership p:last-of-type{
+    font-size: 14px;
+    margin-top: 18px;
+    height: 60px;
+    /* box-sizing: border-box; */
+    
+}
+
+.membership span{
+    font-size: 12px;
+    margin-top: 4px;
+    
+}
+/* 60 18 */
+
+.service-wrapper{
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.service-wrapper li{
+    margin-left: 20px;
+    /* 간격주고 싶어서 뗐는데 뭔가 이상.. */
+}
+
+.service-wrapper button{
+    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+    align-content: center;
+}
