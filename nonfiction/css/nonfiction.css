@@ -395,4 +395,38 @@ hr{
     width: 250px;
     height: 50px;
     align-content: center;
+    background-color: white;
+    border: 1px solid #000;
+}
+
+.footer-wrapper{
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.footer-nav{
+    display: flex;
+    
+}
+
+.footer-nav li{
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+}
+
+.footer-nav li p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer-nav li a{
+    text-decoration: none;
+    outline: none;
+    color: #000;
+    display: inline;
+    /* 여백까지 선택되는 문제ㅜㅜ */
+    font-size: 14px;
 }
