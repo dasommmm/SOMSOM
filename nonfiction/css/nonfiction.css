@@ -399,22 +399,60 @@ hr{
     border: 1px solid #000;
 }
 
+.footer hr{
+    background-color: #000;
+}
+
 .footer-wrapper{
     padding: 50px;
     display: flex;
-    justify-content: space-between;
-    
+    flex-direction: row;
+    justify-content: space-around;
+    /* justify-content: space-between; */
+
 }
+
+.costomer-service{
+    display: flex;
+    flex-direction: column;
+}
+
+.costomer-service h3{
+    /* width: 183px; */
+    font-size: 16px;
+}
+
+.costomer-service p:nth-of-type(1){
+    /* 24 12 10 */
+    font-size: 24px;
+}
+
+.costomer-service p:nth-of-type(2),p:nth-of-type(3){
+    font-size: 12px;
+}
+
+.costomer-service a{
+    font-size: 10px;
+    display: inline-block;
+}
+
 
 .footer-nav{
     display: flex;
     
 }
 
+.footer-nav ul{
+    display: flex;
+    flex-direction: column;
+}
+
 .footer-nav li{
     display: flex;
     flex-direction: column;
-    width: 210px;
+    /* width: 186px; */
+    display: inline-block;
+    /* 여백 선택되길래 이렇게 했는데 맞나요?ㅜ */
 }
 
 .footer-nav li p{
