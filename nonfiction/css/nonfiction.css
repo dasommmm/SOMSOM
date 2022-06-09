@@ -101,7 +101,7 @@ header .drop::after{
     /* 마우스반응 있기 전에 보이면 안됨 */
     overflow: hidden;
     /* 높이만큼 보임 */
-    padding-left: 20px;
+    margin-left: 20px;
     /* padding 줘서 공백 주는게 맞나요*/
 }
 
